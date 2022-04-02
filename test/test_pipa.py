@@ -1,15 +1,15 @@
-import pipa.cli as cli
+import pipa.pipa as pp
 
 
-def test_cli_main_empty(capsys):
-    assert cli.main([]) is None
+def test_pp_what_empty(capsys):
+    assert pp.what([]) == 0
     out, err = capsys.readouterr()
     assert not err
     assert 'pipa' in out
 
 
-def test_cli_main_add_foo(capsys):
-    cli.main(['foo'])
+def test_pp_what_add_foo(capsys):
+    pp.what(['foo'])
     out, err = capsys.readouterr()
     assert not err
     assert 'pipa' in out and 'foo' in out
