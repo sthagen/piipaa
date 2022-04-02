@@ -62,7 +62,8 @@ mypy:
 
 .PHONY: test
 test: clean install
-	pytest --cov=piipaa --log-format="%(levelname)s %(message)s" --asyncio-mode=strict
+	tox -- --cov=piipaa --log-format="%(levelname)s %(message)s"
+#	pytest --cov=piipaa --log-format="%(levelname)s %(message)s" --asyncio-mode=strict
 
 .PHONY: testcov
 testcov: test
@@ -70,7 +71,7 @@ testcov: test
 	@coverage html
 
 .PHONY: all
-all: lint mypy testcov
+all: lint mypy test
 
 .PHONY: clean
 clean:
