@@ -5,7 +5,7 @@ package = shagen/piipaa
 isort = isort src test
 black = black -S -l 120 --target-version py38 src test
 
-.PHONY: bui8ld
+.PHONY: build
 build: clean
 	@pyproject-build
 	@unzip -l dist/*.whl
@@ -50,8 +50,8 @@ init:
 	python -m pip install -r test/requirements-dev.txt
 
 .PHONY: lint
-lint:
-	python setup.py check -ms
+lint: build
+	twine check --strict dist/*
 	flake8 src/ test/
 	$(isort) --check-only --df
 	$(black) --check --diff
