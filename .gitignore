@@ -5,3 +5,4 @@ src/piipaa.egg-info/
 .coverage
 __pycache__/
 build/
+.tox/
