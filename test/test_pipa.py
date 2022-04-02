@@ -9,7 +9,7 @@ def test_pp_what_empty(capsys):
 
 
 def test_pp_what_add_foo(capsys):
-    pp.what(['foo'])
+    assert pp.what(['foo']) == 0
     out, err = capsys.readouterr()
     assert not err
     assert 'pipa' in out and 'foo' in out
