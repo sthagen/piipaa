@@ -2,3 +2,5 @@
 src/pipa/_version.py
 dist/
 src/pipa.egg-info/
+.coverage
+__pycache__/

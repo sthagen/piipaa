@@ -1,7 +1,6 @@
-from importlib.metadata import version, PackageNotFoundError
+from importlib.metadata import PackageNotFoundError, version
 
-
-VERSION_FALLBACK = "2022.4.1"
+VERSION_FALLBACK = '2022.4.1'
 try:
     __version__ = version(__name__)
 except PackageNotFoundError:

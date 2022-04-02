@@ -1,10 +1,12 @@
 import importlib.metadata
 import importlib.resources
 import json
-from typing import List, Union
+from typing import List, Union, no_type_check
 
 from pipa import __version__ as my_version
 
+
+@no_type_check
 def read_what():
     """My resources?"""
     with open(importlib.resources.path(__package__, 'data.json'), 'rt', encoding='utf-8') as handle:
@@ -16,3 +18,4 @@ def what(argv: Union[List[str], None] = None) -> int:
     that = read_what()
     v = importlib.metadata.version(__package__)
     print(that, v, argv, my_version)
+    return 0

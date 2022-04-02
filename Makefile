@@ -3,7 +3,7 @@ package = shagen/pipa
 
 .DEFAULT_GOAL := all
 isort = isort src test
-black = black -S -l 120 --target-version py38 laskea tests
+black = black -S -l 120 --target-version py38 src test
 
 .PHONY: bui8ld
 build: clean
