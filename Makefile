@@ -31,13 +31,13 @@ build: clean
 
 .PHONY: install
 install:
-	pip install -U pip wheel
-	pip install -r test/requirements.txt
-	pip install -U .
+	python -m pip install -U pip wheel
+	python -m pip install -r test/requirements.txt
+	python -m pip install -U .
 
 .PHONY: install-all
 install-all: install
-	pip install -r test/requirements-dev.txt
+	python -m pip install -r test/requirements-dev.txt
 
 .PHONY: isort
 format:
@@ -46,8 +46,8 @@ format:
 
 .PHONY: init
 init:
-	pip install -r test/requirements.txt
-	pip install -r test/requirements-dev.txt
+	python -m pip install -r test/requirements.txt
+	python -m pip install -r test/requirements-dev.txt
 
 .PHONY: lint
 lint:
@@ -80,4 +80,4 @@ clean:
 	@rm -f `find . -type f -name '.*~' `
 	@rm -rf .cache htmlcov *.egg-info src/*.egg-info build dist/*
 	@rm -f .coverage .coverage.*
-	@python setup.py clean
+	@python -m pip uninstall -y piipaa
