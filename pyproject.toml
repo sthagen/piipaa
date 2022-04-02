@@ -6,8 +6,5 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 
-[metadata]
-version = "2022.4.3"
-
 [tool.setuptools_scm]
 write_to = "src/pipa/_version.py"
