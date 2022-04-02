@@ -27,7 +27,7 @@ build: clean
 	@sha512sum dist/*.whl | sed "s/^/sha512:/g;"
 	@echo '```'
 	@printf "Release name is: %s\n" "$$(git-release-name $$(git rev-parse HEAD))"
-	@cat src/pipa/_version.py
+	@cat src/piipaa/_version.py
 
 .PHONY: install
 install:
