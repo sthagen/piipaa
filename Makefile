@@ -61,7 +61,7 @@ mypy:
 	mypy src
 
 .PHONY: test
-test: clean
+test: clean install
 	pytest --cov=pipa --log-format="%(levelname)s %(message)s" --asyncio-mode=strict
 
 .PHONY: testcov
