@@ -1,5 +1,5 @@
 SHELL = /bin/bash
-package = shagen/pipa
+package = shagen/piipaa
 
 .DEFAULT_GOAL := all
 isort = isort src test
@@ -62,7 +62,7 @@ mypy:
 
 .PHONY: test
 test: clean install
-	pytest --cov=pipa --log-format="%(levelname)s %(message)s" --asyncio-mode=strict
+	pytest --cov=piipaa --log-format="%(levelname)s %(message)s" --asyncio-mode=strict
 
 .PHONY: testcov
 testcov: test

@@ -1,7 +1,7 @@
 .python-version
-src/pipa/_version.py
+src/piipaa/_version.py
 dist/
-src/pipa.egg-info/
+src/piipaa.egg-info/
 .coverage
 __pycache__/
 build/

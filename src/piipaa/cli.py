@@ -1,7 +1,7 @@
 import sys
 from typing import List, Union
 
-import pipa.pipa as pp
+import piipaa.piipaa as pp
 
 
 def main(argv: Union[List[str], None] = None) -> int:

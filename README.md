@@ -1,4 +1,4 @@
-# pipa
+# piipaa
 
 Python installs Python anywhere.
 

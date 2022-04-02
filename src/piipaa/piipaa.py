@@ -3,7 +3,7 @@ import importlib.resources
 import json
 from typing import List, Union, no_type_check
 
-from pipa import __version__ as my_version
+from piipaa import __version__ as my_version
 
 
 @no_type_check
