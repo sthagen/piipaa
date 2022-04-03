@@ -49,6 +49,10 @@ init:
 	python -m pip install -r test/requirements.txt
 	python -m pip install -r test/requirements-dev.txt
 
+.PHONY: dark
+dark:
+	$(black)
+
 .PHONY: lint
 lint: build
 	twine check --strict dist/*
@@ -62,16 +66,15 @@ mypy:
 
 .PHONY: test
 test: clean install
-	tox -- --cov=piipaa --log-format="%(levelname)s %(message)s"
-#	pytest --cov=piipaa --log-format="%(levelname)s %(message)s" --asyncio-mode=strict
+	tox -e py39,py38 -- --log-format="%(levelname)s %(message)s"
 
 .PHONY: testcov
 testcov: test
-	@echo "building coverage html"
-	@coverage html
+	@echo "testing with coverage and building coverage html"
+	tox -e py310 -- --cov=piipaa --log-format="%(levelname)s %(message)s"
 
 .PHONY: all
-all: lint mypy test
+all: lint mypy testcov
 
 .PHONY: clean
 clean:
