@@ -9,8 +9,9 @@ from piipaa import __version__ as my_version
 @no_type_check
 def read_what():
     """My resources?"""
-    with open(importlib.resources.path(__package__, 'data.json'), 'rt', encoding='utf-8') as handle:
-        return json.load(handle).get('what', 'Oh no!')
+    with importlib.resources.path(__package__, 'data.json') as data_path:
+        with open(data_path, 'rt', encoding='utf-8') as handle:
+            return json.load(handle).get('what', 'Oh no!')
 
 
 def what(argv: Union[List[str], None] = None) -> int:
