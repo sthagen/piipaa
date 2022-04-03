@@ -2,8 +2,6 @@ SHELL = /bin/bash
 package = shagen/piipaa
 
 .DEFAULT_GOAL := all
-isort = isort src test
-black = black -S -l 120 --target-version py38 src test
 
 .PHONY: build
 build: clean
@@ -39,11 +37,6 @@ install:
 install-all: install
 	python -m pip install -r test/requirements-dev.txt
 
-.PHONY: isort
-format:
-	$(isort)
-	$(black)
-
 .PHONY: init
 init:
 	python -m pip install -r test/requirements.txt
@@ -51,18 +44,20 @@ init:
 
 .PHONY: dark
 dark:
-	$(black)
+	black src test
 
 .PHONY: lint
 lint: build
 	twine check --strict dist/*
-	flake8 src/ test/
-	$(isort) --check-only --df
-	$(black) --check --diff
+	tox -e lint
 
-.PHONY: mypy
-mypy:
-	mypy src
+.PHONY: format
+format:
+	tox -e format
+
+.PHONY: typecheck
+typecheck:
+	tox -e typecheck
 
 .PHONY: test
 test: clean install
@@ -74,7 +69,7 @@ testcov: test
 	tox -e py310 -- --cov=piipaa --log-format="%(levelname)s %(message)s"
 
 .PHONY: all
-all: lint mypy testcov
+all: lint typecheck format testcov
 
 .PHONY: clean
 clean:
