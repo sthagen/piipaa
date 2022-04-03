@@ -1,10 +1,11 @@
 [build-system]
-requires = [
-    "setuptools", 
-    "setuptools_scm", 
-    "wheel"
-]
+requires = ["setuptools", "setuptools_scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools_scm]
 write_to = "src/piipaa/_version.py"
+
+[tool.black]
+line-length = 120 
+skip-string-normalization = "True"
+target-version = ["py38", "py39", "py310"]
