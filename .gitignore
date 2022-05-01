@@ -6,3 +6,4 @@ src/piipaa.egg-info/
 __pycache__/
 build/
 .tox/
+.vscode/
