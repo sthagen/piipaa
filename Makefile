@@ -10,11 +10,11 @@ build: clean
 	@echo "## Checksums"
 	@echo "### Source Archive"
 	@echo '```'
-	@md5sum dist/*.tar.gz | sed "s/^/md5:/g;" 
-	@shasum dist/*.tar.gz | sed "s/^/sha1:/g;" 
-	@sha256sum dist/*.tar.gz | sed "s/^/sha256:/g;" 
-	@sha384sum dist/*.tar.gz | sed "s/^/sha384:/g;" 
-	@sha512sum dist/*.tar.gz | sed "s/^/sha512:/g;" 
+	@md5sum dist/*.tar.gz | sed "s/^/md5:/g;"
+	@shasum dist/*.tar.gz | sed "s/^/sha1:/g;"
+	@sha256sum dist/*.tar.gz | sed "s/^/sha256:/g;"
+	@sha384sum dist/*.tar.gz | sed "s/^/sha384:/g;"
+	@sha512sum dist/*.tar.gz | sed "s/^/sha512:/g;"
 	@echo '```'
 	@echo "### Wheel"
 	@echo '```'
@@ -61,7 +61,7 @@ typecheck:
 
 .PHONY: test
 test: clean install
-	tox -e py39,py38 -- --log-format="%(levelname)s %(message)s"
+	tox -p -e py39,py38 -- --log-format="%(levelname)s %(message)s"
 
 .PHONY: testcov
 testcov: test
@@ -79,4 +79,4 @@ clean:
 	@rm -f `find . -type f -name '.*~' `
 	@rm -rf .cache htmlcov *.egg-info src/*.egg-info build dist/*
 	@rm -f .coverage .coverage.*
-	@python -m pip uninstall -y piipaa
+	@python -m pip uninstall -qqy piipaa
