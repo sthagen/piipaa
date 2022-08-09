@@ -6,4 +6,14 @@ src/piipaa.egg-info/
 __pycache__/
 build/
 .tox/
+
+# Local development artifacts
+*~
+.idea
+*.log
+local*
 .vscode/
+current-bandit.json
+tmp*
+foo
+
