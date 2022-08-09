@@ -12,7 +12,7 @@ Python installs Python anywhere.
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of piipaa](https://todo.sr.ht/~sthagen/piipaa).
+Feature requests and bug reports are best entered in the [todos of piipaa](https://todo.sr.ht/~sthagen/piipaa).
 
 ## Primary Source repository
 
