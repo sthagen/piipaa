@@ -16,7 +16,7 @@ User and developer [documentation of piipaa](https://codes.dilettant.life/docs/p
 
 ## Bug Tracker
 
-Feature requests and bug reports are bested entered in the [todos of piipaa](https://todo.sr.ht/~sthagen/piipaa).
+Feature requests and bug reports are best entered in the [todos of piipaa](https://todo.sr.ht/~sthagen/piipaa).
 
 ## Primary Source repository
 
