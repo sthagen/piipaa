@@ -4,7 +4,7 @@ Python installs Python anywhere.
 
 [License: MIT](https://git.sr.ht/~sthagen/piipaa/tree/default/item/LICENSE)
 
-Third party dependencies are documented in the folder [third-party](third-party/README.md).
+Third party dependencies are documented in the folder [third-party](docs/third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
 [![downloads](https://pepy.tech/badge/piipaa/month)](https://pepy.tech/project/piipaa)
