@@ -7,7 +7,7 @@ Python installs Python anywhere.
 Third party dependencies are documented in the folder [third-party](third-party/README.md).
 
 [![version](https://img.shields.io/pypi/v/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
-[![downloads](https://pepy.tech/badge/piipaa/month)](https://pepy.tech/project/piipaa)
+[![downloads](https://static.pepy.tech/badge/piipaa/month)](https://pepy.tech/project/piipaa)
 [![wheel](https://img.shields.io/pypi/wheel/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
 [![supported-versions](https://img.shields.io/pypi/pyversions/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
 [![supported-implementations](https://img.shields.io/pypi/implementation/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
