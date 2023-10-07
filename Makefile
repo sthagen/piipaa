@@ -78,7 +78,7 @@ clean:
 	@rm -f `find . -type f -name '*~' `
 	@rm -f `find . -type f -name '.*~' `
 	@rm -rf .cache htmlcov *.egg-info src/*.egg-info build dist/*
-	@rm -f .coverage .coverage.*
+	@rm -f .coverage .coverage.* .DS_Store
 	@python -m pip uninstall -qqy piipaa
 
 .PHONY: name
