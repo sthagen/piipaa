@@ -8,7 +8,7 @@ Python installs Python anywhere.
 [![Configuration](badges/configuration-sbom.svg)](third-party/index.html)
 
 [![Version](https://img.shields.io/pypi/v/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
-[![Downloads](https://static.pepy.tech/badge/piipaa/month)](https://pepy.tech/project/piipaa)
+[![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/piipaa)
 [![Supported Versions](https://img.shields.io/pypi/pyversions/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/piipaa/log)
 
