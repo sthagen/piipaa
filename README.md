@@ -9,7 +9,7 @@ Python installs Python anywhere.
 
 [![Version](docs/badges/latest-release.svg)](https://pypi.python.org/pypi/piipaa/)
 [![Downloads](docs/badges/downloads-per-month.svg)](https://pepy.tech/project/piipaa)
-[![Supported Versions](https://img.shields.io/pypi/pyversions/piipaa.svg?style=flat)](https://pypi.python.org/pypi/piipaa/)
+[![Python](docs/badges/python-versions.svg)](https://pypi.python.org/pypi/piipaa/)
 [![Maintenance Status](docs/badges/commits-per-year.svg)](https://git.sr.ht/~sthagen/piipaa/log)
 
 ## Documentation
